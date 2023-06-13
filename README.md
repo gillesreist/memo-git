@@ -16,5 +16,7 @@
  *  _git checkout_ pour naviguer à travers les versions ou les branches
  *  _git remote_ pour voir la liste des serveurs distants ou en ajouter un
  *  _git log_ voir l'historique des commits
- *  _git pull <remote> <branch>_ pour récupérer les commits depuis le repo distant
- *  _git push <remote> <branch>_ pour envoyer les commits jusqu'au repo distant
+ *  _git pull "remote" "branch"_ pour récupérer les commits depuis le repo distant
+ *  _git push "remote" "branch"_ pour envoyer les commits jusqu'au repo distant
+ *  _git revert HEAD_ fait un nouveau commit qui annule le commit précédent
+ *  _git reset "commit" --hard_ Supprime l'historique jusqu'à un commit et modifie le dossier de travail en conséquence. /!\ à ne surtout pas utiliser pour revenir à un commit précédent le dernier pull. /!\ 

@@ -20,3 +20,12 @@
  *  _git push "remote" "branch"_ pour envoyer les commits jusqu'au repo distant
  *  _git revert HEAD_ fait un nouveau commit qui annule le commit précédent
  *  _git reset "commit" --hard_ Supprime l'historique jusqu'à un commit et modifie le dossier de travail en conséquence. /!\ à ne surtout pas utiliser pour revenir à un commit précédent le dernier pull. /!\ 
+
+### Résolution de conflit
+
+Si on veut push nos commits mais que le repo distant à eu des commits d'autres personnes entre temps, l'opération va échouer.
+On va devoir pull la dernière version du repo et si des changements ont eu lieu au même endroit sur le repo distant et en local, il va y avoir un conflit à résoudre.
+La première façon de résoudre le conflit est le merge, qui va créer un commit de merge en plus de notre commit qui a créer le conflit.
+La deuxième façon est de faire un rebase, qui va placer notre dernier commit en Head et qui va comprendre la résolution du conflit, ne créant pas de commit supplémentaire.
+Dans les deux cas, on résout le conflit en modifiant manuellement le ou les fichiers à l'origine du conflit.
+La différence sera visible dans l'historique des commits, le rebase ne gardant aucune trace de cette différence de commits.
